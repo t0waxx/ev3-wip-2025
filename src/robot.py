@@ -1,4 +1,7 @@
-import ev3dev.ev3 as ev3
+try:
+    import ev3dev.ev3 as ev3
+except ImportError:
+    from . import mock_ev3dev as ev3
 
 class Robot:
     def __init__(self):
