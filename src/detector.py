@@ -1,4 +1,4 @@
-from constants import COLOR_THRESHOLDS
+from .constants import COLOR_THRESHOLDS
 
 class ColorDetector:
     def detect(self, r, g, b):

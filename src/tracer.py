@@ -1,4 +1,4 @@
-from constants import Kp, Ki, Kd, BASE_SPEED
+from .constants import Kp, Ki, Kd, BASE_SPEED
 
 class LineTracer:
     def __init__(self):

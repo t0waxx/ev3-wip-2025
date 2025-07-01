@@ -1,14 +1,10 @@
+from src.robot import Robot
+from src.tracer import LineTracer
+from src.detector import ColorDetector
+from src.actions import perform_action
+from src.constants import expected_path, line_on_left
+from src.utils import log
 import time
-import datetime
-from robot import Robot
-from tracer import LineTracer
-from detector import ColorDetector
-from actions import perform_action
-from constants import expected_path, line_on_left
-
-def log(message):
-    now = datetime.datetime.now().strftime("%H:%M:%S.%f")[:-3]
-    print("[{}] {}".format(now, message))
 
 def main():
     robot = Robot()
@@ -29,7 +25,7 @@ def main():
 
             r, g, b = robot.get_rgb()
             current_color = detector.detect(r, g, b)
-            log("Detected: {}".format(current_color))
+            log(f"Detected: {current_color}")
 
             if current_color != "linetrace mode" and current_color != last_color:
                 last_color = current_color
