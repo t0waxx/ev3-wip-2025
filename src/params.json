@@ -1,0 +1,62 @@
+{
+  "pid": {
+    "Kp": 0.53,
+    "Ki": 0.01,
+    "Kd": 0.1
+  },
+  "motor": {
+    "turn_in_sp": -20,
+    "turn_out_sp": 230,
+    "turn_time_sp": 1000,
+    "base_speed": 100
+  },
+  "line_on_left": true,
+  "color_thresholds": {
+    "red": {"r_min": 201, "g_max": 69, "b_max": 69},
+    "green": {"r_max": 69, "g_min": 111, "b_max": 89},
+    "blue": {"r_max": 59, "g_max": 149, "b_min": 131}
+  },
+  "routes": {
+    "task1": [
+        ["red", 0, "straight"],
+        ["green", 0, "straight"],
+        ["red", 0, "straight"],
+        ["green", 0, "straight"],
+        ["red", 0, "stop"]
+    ],
+    "task2": [
+        ["red", 1, "straight"],
+        ["green", 1, "straight"],
+        ["red", 1, "straight"],
+        ["green", 1, "straight"],
+        ["red", 0, "stop"]
+    ],
+    "task3": [
+        ["red", 0, "turn_left"],
+        ["blue", 0, "stop"]
+    ],
+    "task4": [
+        ["red", 0, "turn_left"],
+        ["blue", 0, "straight"],
+        ["red", 0, "turn_left"],
+        ["green", 0, "stop"]
+    ],
+    "task5": [
+      ["red", 0, "turn_left"],
+      ["blue", 0, "turn_right"],
+      ["green", 0, "straight"],
+      ["green", 0, "turn_left"],
+      ["red", 0, "straight"],
+      ["green", 0, "straight"],
+      ["red", 0, "straight"],
+      ["green", 0, "straight"],
+      ["red", 0, "turn_left"],
+      ["blue", 0, "turn_right"],
+      ["green", 0, "straight"],
+      ["green", 0, "turn_right"],
+      ["red", 0, "straight"],
+      ["green", 0, "straight"],
+      ["red", 0, "stop"]
+    ]
+  }
+}
