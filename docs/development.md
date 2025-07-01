@@ -2,21 +2,6 @@
 
 このドキュメントでは、EV3ロボット制御プロジェクトの開発とテストの手順を説明します。
 
-## 必要な環境
-
-- Python 3.7以上
-- `ev3dev` ライブラリ（実機使用時）
-
-## セットアップ
-
-1. 必要なPythonパッケージをインストールします。
-
-```bash
-pip install -r requirements.txt
-```
-
-1. 実機での動作確認を行う場合、`ev3dev` ライブラリをインストールしてください。
-
 ## テスト
 
 ### 実機でのテスト
@@ -25,7 +10,7 @@ pip install -r requirements.txt
 1. `main.py` を実行してロボットを制御します。
 
 ```bash
-python main.py run --route default
+python main.py run default
 ```
 
 ### PC上でのテスト
@@ -34,7 +19,7 @@ python main.py run --route default
 1. `mock_ev3dev.py` を利用して、ロボットの動作をシミュレートします。
 
 ```bash
-python main.py run --route default
+python main.py run default
 ```
 
 ## デバッグ

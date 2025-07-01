@@ -1,10 +1,12 @@
 # EV3 Robot Control Project
 
 ## 概要
+
 このプロジェクトは、EV3ロボットを制御するためのPythonプログラムです。ロボットの動作、パラメータ管理、ルート設定などを柔軟に行うことができます。
 
 ## ディレクトリ構成
-```
+
+```plaintext
 .
 ├── main.py                # エントリーポイント
 └── src
@@ -23,18 +25,23 @@
 ## 主な機能
 
 ### 1. ロボット制御
+
 `main.py` を使用してロボットを制御します。
 
-#### 実行例
+#### 実行例（ロボット制御）
+
 ```bash
-python main.py run --route default
+python main.py run default
 ```
-- `--route` オプションで `params.json` に定義されたルートを指定します。
+
+- `default` の部分に `params.json` に定義されたルート名を指定します。
 
 ### 2. パラメータ管理
+
 `param_tool.py` を使用してパラメータを管理します。
 
-#### 実行例
+#### 実行例（パラメータ管理）
+
 ```bash
 python src/param_tool.py --show-all       # 全パラメータを表示
 python src/param_tool.py --show-routes   # ルート一覧を表示
@@ -42,12 +49,15 @@ python src/param_tool.py --show-route-detail default  # 指定ルートの詳細
 ```
 
 ### 3. モック環境
+
 `mock_ev3dev.py` を使用して、PC上でロボットの動作をシミュレートできます。
 
 ## パラメータ設定
+
 `params.json` にロボットの動作やルート設定を記述します。
 
 ### params.json の例
+
 ```json
 {
   "pid": {
@@ -88,12 +98,24 @@ python src/param_tool.py --show-route-detail default  # 指定ルートの詳細
 ```
 
 ## 開発・テスト
+
 - 実機での動作確認には `ev3dev.ev3` を使用します。
 - PC上での開発・テストには `mock_ev3dev.py` を使用します。
 
 ## 必要な環境
+
 - Python 3.7以上
 - `ev3dev` ライブラリ（実機使用時）
 
 ## ライセンス
+
 MIT License
+
+## 詳細ドキュメント
+
+プロジェクトの詳細な仕様や使用方法については、以下のドキュメントをご参照ください：
+
+- [CLIツールの使い方](docs/usage.md)
+- [params.json の詳細](docs/parameters.md)
+- [モック環境のセットアップと使用方法](docs/mock_environment.md)
+- [開発とテストの手順](docs/development.md)
